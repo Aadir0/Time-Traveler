@@ -9,6 +9,7 @@ public class Door : MonoBehaviour
     private Animator anim;
     public bool isOpen = false;
     [SerializeField] private GameObject winningSceneCanvas;
+    [SerializeField] private SpriteRenderer spriteRenderer;
 
     void Start()
     {
@@ -44,6 +45,7 @@ public class Door : MonoBehaviour
                 {
                     Debug.Log("Player entered door in scene 2. Enabling winning scene canvas.");
                     winningSceneCanvas.SetActive(true);
+                    spriteRenderer.enabled = false;
                 }
                 else
                 {
