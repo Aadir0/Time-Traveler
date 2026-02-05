@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5408299919372506375}
   - component: {fileID: 6485107093124191138}
   - component: {fileID: 3940419816635985069}
-  - component: {fileID: 8099807699342082411}
+  - component: {fileID: 393471319863934582}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -129,10 +129,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
   isOpen: 0
-  winningSceneCanvas: {fileID: 0}
   spriteRenderer: {fileID: 0}
---- !u!60 &8099807699342082411
-PolygonCollider2D:
+--- !u!61 &393471319863934582
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -175,10 +174,5 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
-  m_UseDelaunayMesh: 1
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

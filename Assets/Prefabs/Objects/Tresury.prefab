@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 732221066429323283}
   - component: {fileID: 2334343777244197061}
-  - component: {fileID: 7698985535748199557}
   - component: {fileID: 5746877125485420009}
+  - component: {fileID: 8943197175536170404}
   m_Layer: 0
   m_Name: Tresury
   m_TagString: Untagged
@@ -93,8 +93,30 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!61 &7698985535748199557
-BoxCollider2D:
+--- !u!95 &5746877125485420009
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856616955035089607}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e697ed3517e799840a7f24b8cf055ebe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!60 &8943197175536170404
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -123,7 +145,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -137,27 +159,28 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.71875, y: 0.6875}
-  m_EdgeRadius: 0
---- !u!95 &5746877125485420009
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 856616955035089607}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e697ed3517e799840a7f24b8cf055ebe, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.24650995, y: 0.3170338}
+      - {x: 0.15822905, y: 0.31110647}
+      - {x: 0.15047476, y: 0.2882261}
+      - {x: -0.098956525, y: 0.2757353}
+      - {x: -0.111409925, y: 0.3176652}
+      - {x: -0.17406476, y: 0.31554487}
+      - {x: -0.22809932, y: 0.2607376}
+      - {x: -0.26831973, y: 0.18293813}
+      - {x: -0.26450077, y: -0.15364638}
+      - {x: -0.2995286, y: -0.19401471}
+      - {x: -0.2915984, y: -0.25027615}
+      - {x: -0.26634815, y: -0.28197312}
+      - {x: -0.08675538, y: -0.2819733}
+      - {x: -0.04744627, y: -0.25924313}
+      - {x: -0.040605444, y: -0.19123846}
+      - {x: 0.25705677, y: -0.19280736}
+      - {x: 0.3006555, y: -0.14299677}
+      - {x: 0.30308464, y: -0.03518617}
+      - {x: 0.3367688, y: -0.042017214}
+      - {x: 0.3283855, y: 0.18600619}
+      - {x: 0.30068278, y: 0.23255199}
+      - {x: 0.27829307, y: 0.28004265}
+  m_UseDelaunayMesh: 1

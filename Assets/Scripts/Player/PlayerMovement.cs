@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private GameObject diePrefab;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private GameObject torchGameObject;
     private Vector3 moveDirection;
+    [SerializeField] private AudioSource dieSound;
+    private bool facingRight = true; // Track which direction player is facing
 
     void Awake()
     {
@@ -33,6 +37,16 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("MoveX", inputX);
         anim.SetFloat("MoveY", inputY);
 
+        // Track facing direction for torch (blend tree handles visual flip)
+        if (inputX > 0)
+        {
+            facingRight = true;
+        }
+        else if (inputX < 0)
+        {
+            facingRight = false;
+        }
+
         if (moveDirection == Vector3.zero)
         {
             anim.SetBool("moving", false);
@@ -48,14 +62,6 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector3(moveDirection.x * speed, moveDirection.y * speed);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Enemy"))
-        {
-            StartCoroutine(Die());
-        }
-    }
-
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
@@ -67,6 +73,8 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator Die()
     {
         //Disable player movement
+        dieSound.Play();
+
         speed = 0f;
         
         // Spawn death effect
@@ -74,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Instantiate(diePrefab, transform.position, transform.rotation);
             spriteRenderer.enabled = false; // Hide player sprite
+            torchGameObject.SetActive(false); // Hide torch GameObject
         }
         
         //Wait for 1 second
@@ -81,5 +90,10 @@ public class PlayerMovement : MonoBehaviour
         
         //Reload current scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public bool IsFacingRight()
+    {
+        return facingRight;
     }
 }

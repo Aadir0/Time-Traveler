@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6850434550313282990}
   - component: {fileID: 8170225443310764226}
   - component: {fileID: 1272635825358848268}
-  - component: {fileID: 4050309375275393726}
+  - component: {fileID: 8631769493124670058}
   m_Layer: 3
   m_Name: Box
   m_TagString: Box
@@ -102,12 +102,12 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4677992120197692924}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 200
+  m_LinearDamping: 10
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -117,7 +117,7 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -167,7 +167,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.62645346, y: 0.62625754}
   m_EdgeRadius: 0
---- !u!114 &4050309375275393726
+--- !u!114 &8631769493124670058
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -176,8 +176,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 4677992120197692924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3016adf36a3b9a44691c5f8baa7a76f0, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ab1ee560a481aa44aaed8f639fb32f2, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Pushable
-  pushDuration: 0.5
-  gridSize: 1
+  m_EditorClassIdentifier: Assembly-CSharp::StepPushBox
+  pushSpeed: 1.5
+  acceleration: 20
+  stopDamping: 50
+  minContactTime: 0.3
