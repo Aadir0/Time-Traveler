@@ -20,5 +20,3 @@ This is a game about learning through failure, about mastering space and sequenc
 * Move Right — D or →
 
 ### Enjoy The Game
-
-## ScreenShots
