@@ -8,7 +8,6 @@ public class StepPushBox : MonoBehaviour
     public float acceleration = 20f;
     public float stopDamping = 30f;
     public float minContactTime = 0.3f;
-
     Rigidbody2D rb;
     float contactTimer;
     bool beingPushed;

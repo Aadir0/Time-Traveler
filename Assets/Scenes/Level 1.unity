@@ -2614,7 +2614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeTravel
   teleportInterval: 3
-  checkpointSpacing: 4
+  checkpointSpacing: 8
   player: {fileID: 692432366}
 --- !u!4 &1319328173 stripped
 Transform:

@@ -2330,6 +2330,7 @@ MonoBehaviour:
   door1Script: {fileID: 0}
   doorAnimator: {fileID: 1790887680607458815}
   doorSound: {fileID: 242380075}
+  boxCollider: {fileID: 0}
 --- !u!61 &1034046830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2743,7 +2744,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeTravel
   teleportInterval: 3
-  checkpointSpacing: 4
+  checkpointSpacing: 8
   player: {fileID: 692432366}
 --- !u!1001 &1397906035
 PrefabInstance:

@@ -13,11 +13,9 @@ public class SceneFadeController : MonoBehaviour
     [SerializeField] private float endAlpha = 1f;
     
     [Header("Spotlight Settings")]
-    [Tooltip("The custom light script component (drag the spotlight GameObject here)")]
     [SerializeField] private MonoBehaviour lightScript;
-    [Tooltip("Name of the volumetric intensity property/field in the light script")]
     [SerializeField] private string volumetricIntensityPropertyName = "volumetricIntensity";
-    
+
     [Header("UI Objects to Disable")]
     [SerializeField] private GameObject uiObject1;
     [SerializeField] private GameObject uiObject2;

@@ -4,7 +4,7 @@ public class Trap2 : MonoBehaviour
 {
     [SerializeField] private Animator anim;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {

@@ -2092,6 +2092,7 @@ MonoBehaviour:
   door1Script: {fileID: 0}
   doorAnimator: {fileID: 1790887680607458815}
   doorSound: {fileID: 242380075}
+  boxCollider: {fileID: 0}
 --- !u!61 &1034046830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2505,7 +2506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeTravel
   teleportInterval: 3
-  checkpointSpacing: 4
+  checkpointSpacing: 8
   player: {fileID: 692432366}
 --- !u!1001 &1397906035
 PrefabInstance:
@@ -3197,6 +3198,7 @@ MonoBehaviour:
   door1Script: {fileID: 0}
   doorAnimator: {fileID: 1790887680607458815}
   doorSound: {fileID: 242380075}
+  boxCollider: {fileID: 0}
 --- !u!61 &1715793077
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -14953,11 +14955,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edbc8eea25b2b594693a9acca9d97111, type: 3}
---- !u!212 &2413605093988910719 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 927685256553929844, guid: edbc8eea25b2b594693a9acca9d97111, type: 3}
-  m_PrefabInstance: {fileID: 2413605093988910718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2912021981768511865
 GameObject:
   m_ObjectHideFlags: 0
@@ -15070,9 +15067,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
   isOpen: 0
-  spriteRenderer: {fileID: 2413605093988910719}
---- !u!60 &8831836734998194944
-PolygonCollider2D:
+  winningScene: {fileID: 0}
+--- !u!61 &8831836734998194944
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15115,13 +15112,8 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
-  m_UseDelaunayMesh: 1
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

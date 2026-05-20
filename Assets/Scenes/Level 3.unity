@@ -2233,10 +2233,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PressurePlate
   connectedDoor: {fileID: 1987102060}
   plateAnimator: {fileID: 1936401079}
-  doorScript: {fileID: 8831836734998194943}
+  doorScript: {fileID: 0}
   door1Script: {fileID: 1987102065}
   doorAnimator: {fileID: 1987102062}
   doorSound: {fileID: 242380075}
+  boxCollider: {fileID: 0}
 --- !u!61 &884161795
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2518,6 +2519,7 @@ MonoBehaviour:
   door1Script: {fileID: 0}
   doorAnimator: {fileID: 1790887680607458815}
   doorSound: {fileID: 242380075}
+  boxCollider: {fileID: 0}
 --- !u!61 &1034046830
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2993,7 +2995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TimeTravel
   teleportInterval: 3
-  checkpointSpacing: 4
+  checkpointSpacing: 8
   player: {fileID: 692432366}
 --- !u!1001 &1397906035
 PrefabInstance:
@@ -13522,8 +13524,8 @@ GameObject:
   - component: {fileID: 1987102064}
   - component: {fileID: 1987102063}
   - component: {fileID: 1987102062}
-  - component: {fileID: 1987102061}
   - component: {fileID: 1987102065}
+  - component: {fileID: 1987102066}
   m_Layer: 0
   m_Name: Door (1)
   m_TagString: Untagged
@@ -13531,57 +13533,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!60 &1987102061
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987102060}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
-  m_UseDelaunayMesh: 1
 --- !u!95 &1987102062
 Animator:
   serializedVersion: 7
@@ -13691,6 +13642,52 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door1
   Open: 0
+--- !u!61 &1987102066
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1987102060}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1993314367
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15417,11 +15414,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: edbc8eea25b2b594693a9acca9d97111, type: 3}
---- !u!212 &2413605093988910719 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 927685256553929844, guid: edbc8eea25b2b594693a9acca9d97111, type: 3}
-  m_PrefabInstance: {fileID: 2413605093988910718}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2912021981768511865
 GameObject:
   m_ObjectHideFlags: 0
@@ -15534,9 +15526,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Door
   isOpen: 0
-  spriteRenderer: {fileID: 2413605093988910719}
---- !u!60 &8831836734998194944
-PolygonCollider2D:
+  winningScene: {fileID: 0}
+--- !u!61 &8831836734998194944
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -15569,7 +15561,7 @@ PolygonCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.019998908}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -15579,13 +15571,8 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.5, y: 0.5}
-      - {x: -0.5, y: -0.5}
-      - {x: 0.5, y: -0.5}
-      - {x: 0.5, y: 0.5}
-  m_UseDelaunayMesh: 1
+  m_Size: {x: 1, y: 0.9600022}
+  m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
