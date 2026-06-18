@@ -19,4 +19,5 @@ This is a game about learning through failure, about mastering space and sequenc
 * Move Left — A or ←
 * Move Right — D or →
 
-### Enjoy The Game
+## Here's the link to download and play the game [Time-traveler](https://cholebhature-hehe.itch.io/time-traveler)
+### I hope you will enjoy the game drop feedbacks on the itch page of this game.
